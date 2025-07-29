@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: db_shared_schema
+    database: "{{('di_db')}}"
+    schema: raw_schema
+    tables:
+      - name: raw_customer
+      - name: raw_order
+      - name: raw_product
