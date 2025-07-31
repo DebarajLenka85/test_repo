@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: weekly_metrics
+    label: Debaraj by the Week
+    type: dashboard
+    maturity: high
+    description: For more exposure about project details
+
+    depends_on:
+      - ref('final_model')
+      - ref('order_merge')
+      - source('db_shared_schema','raw_order')
+      - source('db_shared_schema','raw_customer')
+
+    owner:
+      name: Debaraj
+      email: ldebaraj50@gmail.com
